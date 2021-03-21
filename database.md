@@ -4,5 +4,15 @@ Our team create "Final_Project" database to existing PostgreSQL11 server the wor
 Create New Database  : 
  ![alt text][Image1]
   
- [Image1]: https://github.com/ttan0408/Neural_Network_Charity_Analysis/blob/main/Merge_Dataframe.PNG "Create New Database"
+ [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Create New Database"
+ 
+Name New Database  : 
+ ![alt text][Image2]
+  
+ [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Name New Database" 
+ 
+ Connecting Database to Pandas :
+ ![alt text][Image3]
+  
+ [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Connecting Database to Pandas" 
 
