@@ -10,6 +10,7 @@
 
 ## Database:  
 - Postgres SQL
+- PG Admin
 
 ## Machine Learning:  
 - Scikit Learn
