@@ -9,7 +9,7 @@ Create New Database  :
 Name New Database  : 
  ![alt text][Image2]
   
- [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Name New Database" 
+ [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup2.PNG "Name New Database" 
  
  Connecting Database to Pandas :
  ![alt text][Image3]
