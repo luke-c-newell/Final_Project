@@ -8,7 +8,8 @@
 - Pandas
 - Jupyter Notebook
 
-## Database:  Postgres SQL
+## Database:  
+- Postgres SQL
 
 ## Machine Learning:  
 - Scikit Learn
