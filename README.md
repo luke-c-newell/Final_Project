@@ -21,11 +21,12 @@ The dataset we are using is owid-covid-data.csv. Our World in Data have collated
 - World Bank
 - Global Burden of Disease
 
-The live dataset can be found at https://covid.ourworldindata.org/data/owid-covid-data.csv and all data produced by Our World in Data are open access under the [Creative Commons BY license](https://creativecommons.org/licenses/by/4.0/). 
+The live dataset can be found at [OurWorldinData.org](https://covid.ourworldindata.org/data/owid-covid-data.csv) and all data produced by Our World in Data are open access under the [Creative Commons BY license](https://creativecommons.org/licenses/by/4.0/). 
 
 ### Questions we hope to answer with the data
 - Based on available data, how many cases can a country expect to see over the next two weeks? 
-- Based on available data, how many fatalities can a country expect to see over the next two weeks? 
+- Based on available data, how many fatalities can a country expect to see over the next two weeks?
+- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
 
 ### Communication protocols
 As a team, we will communicate primarily through a private slack channel 'Group_9'. We have also shared our cell phone numbers with each other in case we need to urgently reach another team member. If a team member is unable to join the Tuesday or Thursday meetings, they should notify the other team members via the slack channel. We also have a recurring Zoom meeting set up that team members can join as needed.
