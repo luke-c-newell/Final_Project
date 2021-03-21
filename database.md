@@ -14,5 +14,5 @@ Name New Database  :
  Connecting Database to Pandas :
  ![alt text][Image3]
   
- [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Connecting Database to Pandas" 
+ [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup3.PNG "Connecting Database to Pandas" 
 
