@@ -8,6 +8,6 @@ Database:  Postgres SQL
 
 Machine Learning:  Scikit Learn / TensorFlow / Keras
 
-Vis & Analysis:  Matplotlib / ReadMe / PPT or Google Slides
+Vis & Analysis:  Matplotlib / ReadMe / PPT or Google Slides / Tableau
 
 
