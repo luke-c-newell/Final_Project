@@ -6,6 +6,8 @@
 ## Tools:
 - Python
 - Pandas
+- Numpy
+- Tensorflow
 - Jupyter Notebook
 
 ## Database:  
