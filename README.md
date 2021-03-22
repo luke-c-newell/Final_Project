@@ -11,7 +11,7 @@ In order to accomplish this task, we must employ a novel model type that was not
 
 Machine Learning models are not typically applied to time series data.  Rather, they are are usually trained using supervised learning; expecting data in the form of samples with inputs and outputs. However, it is possible to perform time series forecasting using ML.  In order to do so, the time series data must be transformed into a supervised learning problem.  
 
-## Litterature Sources for Time Series ML Analysis
+## Literature Sources for Time Series ML Analysis
 - [Applying Standard ML algorithms to Time-Series forecasting](https://towardsdatascience.com/preprocessing-time-series-data-for-supervised-learning-2e27493f44ae)
 - [Convert a Time Series to a Supervised Learning Problem in Python](https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/)
 - [Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
