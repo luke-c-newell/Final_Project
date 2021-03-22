@@ -14,37 +14,20 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 ## Litterature Sources for Time Series ML Analysis
 - [Applying Standard ML algorithms to Time-Series forecasting](https://towardsdatascience.com/preprocessing-time-series-data-for-supervised-learning-2e27493f44ae)
 - [Convert a Time Series to a Supervised Learning Problem in Python](https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/)
-
+- [Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
+- [A Quick Deep Learning Recipe: Time Series Forecasting with Keras in Python](https://towardsdatascience.com/a-quick-deep-learning-recipe-time-series-forecasting-with-keras-in-python-f759923ba64)
+- [How to Make Out-of-Sample Forecasts with ARIMA in Python](https://machinelearningmastery.com/make-sample-forecasts-arima-python/)
 
 ## Procedure
-1. Import dependencies 
-2. Import data set
-3. Preprocess Data
-4. Generate a OneHotEncoder instance
-5. Fit and transform OneHotEncoder
-6. Add the encoded variables to a dataframe
-7. Merge OneHotEncoder features and drop originals
-8. Split the preprocessed data into features and target
-9. Split the preprocessed data into training and testing data
-10. Create a StandardScaler
-11. Fit the StandardScaler
-12. Define the model
-13. Where appropriate, define and add hidden layers
-14. Where appropriate, define and add the output layer
-15. Run the model
+1. Import dependencies - complete
+2. Import data set from provisional database - complete
+3. Preprocess Data - provisionally complete
+4. Split the dataset into training (ARIMA model) and testing. 
+5. Apply a standard scaler 
+6. Difference the data - to make it stationary.  
+7. Define / Develop Neural Network 
+8. Fit model
+9. Build features for forecasting
 
-
-
-
-
-
-Questions we hope to answer with the data
-Based on available data, how many cases can a country expect to see over the next two weeks?
-Based on available data, how many fatalities can a country expect to see over the next two weeks?
-Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
-
-
-Machine Learning:
-Scikit Learn
-TensorFlow
-Keras
+## Status
+Becoming familiar with the new methods to apply ML forecasting to time series data.  
