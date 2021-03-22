@@ -31,8 +31,25 @@ The live dataset can be found at [OurWorldinData.org](https://covid.ourworldinda
 ### Communication protocols
 As a team, we will communicate primarily through a private slack channel 'Group_9'. We have also shared our cell phone numbers with each other in case we need to urgently reach another team member. If a team member is unable to join the Tuesday or Thursday meetings, they should notify the other team members via the slack channel. We also have a recurring Zoom meeting set up that team members can join as needed.
 
-## Technologies used
+## Technologies Used
+### Tools:
+- Python
+- Pandas
+- Numpy
+- Tensorflow
+- Jupyter Notebook
 
-## Database
+### Database:  
+- Postgres SQL
+- PG Admin
 
-## Machine learning model
+### Machine Learning:  
+- Scikit Learn
+- TensorFlow
+- Keras
+
+### Vis & Analysis:  
+- Matplotlib
+- ReadMe
+- PPT or Google Slides
+- Tableau
