@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------------------
 
 ## Overview of the Machine Learning Analysis 
-This model will attempt to answer the following questions regarding CoVID pandemic:
+This model will attempt to answer the following questions regarding the CoVID pandemic:
 - Based on available data, how many cases can a country expect to see over the next given time period?
 - Based on available data, how many fatalities can a country expect to see over the next given time period?
 - Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
