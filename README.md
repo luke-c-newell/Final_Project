@@ -3,31 +3,18 @@
 
 ## Overview of the Machine Learning Analysis 
 This model will attempt to answer the following questions regarding CoVID pandemic:
-- 
+- Based on available data, how many cases can a country expect to see over the next given time period?
+- Based on available data, how many fatalities can a country expect to see over the next given time period?
+- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
 
+In order to accomplish this task, we must employ a novel model type that was not presented within the Data Analytics Bootcamp.  Rather than employing classification or clustering models, this analysis must incorporate a supervised regression ML model. 
 
+Machine Learning models are not typically applied to time series data.  Rather, they are are usually trained using supervised learning; expecting data in the form of samples with inputs and outputs. However, it is possible to perform time series forecasting using ML.  In order to do so, the time series data must be transformed into a supervised learning problem.  
 
-## Data Sources and Coding Files
-Data for analysis was provided within the attached ([CSV file). ](/Resources/charity_data.csv)
+## Litterature Sources for Time Series ML Analysis
+- [Applying Standard ML algorithms to Time-Series forecasting](https://towardsdatascience.com/preprocessing-time-series-data-for-supervised-learning-2e27493f44ae)
+- [Convert a Time Series to a Supervised Learning Problem in Python](https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/)
 
-Statistical analysis was performed in Python and is attached:  [AlphabetSoupCharity](AlphabetSoupCharity.ipynb), and [AlphabetSoupCharity_Optimization](AlphabetSoupCharity_Optimization.ipynb).
-
-The data contained the following features:
-- APPLICATION_TYPE—Alphabet Soup application type
-- AFFILIATION—Affiliated sector of industry
-- CLASSIFICATION—Government organization classification
-- USE_CASE—Use case for funding
-- ORGANIZATION—Organization type
-- STATUS—Active status
-- INCOME_AMT—Income classification
-- SPECIAL_CONSIDERATIONS—Special consideration for application
-- ASK_AMT—Funding amount requested
-
-The following was the target variable:
-- IS_SUCCESSFUL—Was the money used effectively
-
-The following two columns were removed from the model because they were simply identifications for the features.  
-- EIN and NAME—Identification columns
 
 ## Procedure
 1. Import dependencies 
