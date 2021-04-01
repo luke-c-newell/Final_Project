@@ -53,7 +53,7 @@ FOLDER: Data_Base_Hankinson
 •	**owid-covid-data.csv** - Input data containing covid data.  This file is read into **Database_Integration_04012021.sql** and populates **raw_covid_clean** table.  
 
 
-•	**Action Items**
+## Action Items
 1.	****Include at least one connection string (using SQLAlchemy or PyMongo).**  Owner: team to discuss
 2.	Provide ERD with relationships. Owner: Mike 
 
