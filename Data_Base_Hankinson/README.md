@@ -17,13 +17,21 @@ However, at this time, we have not discussed a method to integrate with SQLAlche
 Files are currently housed within the following branch:  MikeHaninson/segement-2 Branch.  The files are maintained in the following structure.  
 
 FOLDER: Data_Base_Hankinson
+
 	Database_Create_and_Join_Tables_04012021.sql
+	
 	Database_ETL_04012021.ipynb
-Database_Integration_04012021.sql
-Deep_Learning_Recipe.ipynb
-Provisional_ML_Model_Week2.ipynb
-FOLDER: Resources
+	
+	Database_Integration_04012021.sql
+
+	Deep_Learning_Recipe.ipynb
+
+	Provisional_ML_Model_Week2.ipynb
+
+	FOLDER: Resources
+	
 		country_index.csv
+		
 		owid-covid-data.csv
 
 ## File Details
