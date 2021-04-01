@@ -1,89 +1,53 @@
-## Overview
+# Data Base Update – 04/01/2021 Mike Hankinson
 ----------------------------------------------------------------------------------
-This repository contains code for our final project, completed as part of the University of Texas at Austin - Data Analysis and Visualization bootcamp. The project will analyze data related to the Covid-19 pandemic, with the aim of producing a machine learning model that predicts the number of cases/fatalities that a given country can expect in the future.
 
-#### Team Members:
-- Mike Hankinson
-- Tan Tran
-- Luke Newell
-- Keith Rabb
+## Database Integration Deliverables
+1.	Database stores static data for use during the project
+2.	Database interfaces with the project in some format
+3.	Includes at least two tables
+4.	Includes at least one join using the database language (not including any joins in Pandas)
+5.	Includes at least one connection string (using SQLAlchemy or PyMongo)
+6.	Provide ERD with relationships
 
-### Why did we select this topic?
-The Covid-19 pandemic has impacted the lives of billions of people all over the globe. Every member of the team has been affected in some way and we would like to use the skills we have learned to contribute to a better understanding of the spread of the virus. 
+## Database Integration Progress
+As of Thursday, April 1, our Final_Project database answers deliverables 1-4.  I will create the ERD tomorrow (deliverable 6).  
+However, at this time, we have not discussed a method to integrate with SQLAlchemy or PyMongo (deliverable 5).  
 
-### Description of the source of data
-The dataset we are using is owid-covid-data.csv. Our World in Data have collated the data from a number of different sources, which can be found [here](https://github.com/owid/covid-19-data/tree/master/public/data). They source their data from the following organizations:
+## File Structure 
+Files are currently housed within the following branch:  MikeHaninson/segement-2 Branch.  The files are maintained in the following structure.  
 
-- COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)
-- European Centre for Disease Prevention and Control (ECDC)
-- Official government reports
-- United Nations
-- World Bank
-- Global Burden of Disease
+FOLDER: Data_Base_Hankinson
+	Database_Create_and_Join_Tables_04012021.sql
+	Database_ETL_04012021.ipynb
+Database_Integration_04012021.sql
+Deep_Learning_Recipe.ipynb
+Provisional_ML_Model_Week2.ipynb
+FOLDER: Resources
+		country_index.csv
+		owid-covid-data.csv
 
-The live dataset can be found at [OurWorldinData.org](https://covid.ourworldindata.org/data/owid-covid-data.csv) and all data produced by Our World in Data are open access under the [Creative Commons BY license](https://creativecommons.org/licenses/by/4.0/). 
+## File Details
 
-### Questions we hope to answer with the data
-- Based on available data, how many cases can a country expect to see over the next two weeks? 
-- Based on available data, how many fatalities can a country expect to see over the next two weeks?
-- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
+•	**Database_Create_and_Join_Tables_04012021.sql** - This file contains code, that when run within the in pgAdmin Query Editor for the **Final_Project** database accomplishes the following: creates tables **raw_covid_clean** and **country** as well as performs the join on the 2 tables into a third.   Open file with Visual Studio Code.  
 
-### Communication protocols
-As a team, we will communicate primarily through a private slack channel 'Group_9'. We have also shared our cell phone numbers with each other in case we need to urgently reach another team member. If a team member is unable to join the Tuesday or Thursday meetings, they should notify the other team members via the slack channel. We also have a recurring Zoom meeting set up that team members can join as needed.
+•	**Database_ETL_04012021.ipynb** – This file contains python code that performs the following operations:  imports data sets, populates both input tables into the pgAdmin **Final_Project** database.  Open with Jupyter Notebook.  
 
-## Technologies Used
-### Tools:
-- Python
-- Pandas
-- Numpy
-- Tensorflow
-- Jupyter Notebook
+     **NOTE:  The joined table (model input) is named covid_data_final.  Model inputs must be modified for this change.**  
 
-### Database:  
-- Postgres SQL
-- PG Admin
+•	**Database_Integration_04012021.sql** – This file contains the **Final_Project** database that houses 3 tables.  Open file with pgAdmin
 
-### Machine Learning:  
-- Scikit Learn
-- TensorFlow
-- Keras
+•	**Deep_Learning_Recipe.ipynb** - Using python code, develops a model for the data set.  Demonstrates the ability to interact with the **Final_Project** database.
 
-### Vis & Analysis:  
-- Matplotlib
-- ReadMe
-- PPT or Google Slides
-- Tableau
+•	**Provisional_ML_Model_Week2.ipynb** – Using python code, develops a model for the data set.  Demonstrates the ability to interact with the **Final_Project** database.
+
+•	**country_index.csv** – Input data containing an index listing of all countries.  This file is read into **Database_Integration_04012021.sql** and populates **country** table.  
+
+•	**owid-covid-data.csv** - Input data containing covid data.  This file is read into **Database_Integration_04012021.sql** and populates **raw_covid_clean** table.  
 
 
-## Overview of the Machine Learning Analysis 
-This model will attempt to answer the following questions regarding the CoVID pandemic:
-- Based on available data, how many cases can a country expect to see over the next given time period?
-- Based on available data, how many fatalities can a country expect to see over the next given time period?
-- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
+•	**Action Items**
+1.	****Include at least one connection string (using SQLAlchemy or PyMongo).**  Owner: team to discuss
+2.	Provide ERD with relationships. Owner: Mike 
 
-In order to accomplish this task, we must employ a novel model type that was not presented within the Data Analytics Bootcamp.  Rather than employing classification or clustering models, this analysis must incorporate a supervised regression ML model. 
-
-Machine Learning models are not typically applied to time series data.  Rather, they are are usually trained using supervised learning; expecting data in the form of samples with inputs and outputs. However, it is possible to perform time series forecasting using ML.  In order to do so, the time series data must be transformed into a supervised learning problem.  
-
-## Literature Sources for Time Series ML Analysis
-- [Applying Standard ML algorithms to Time-Series forecasting](https://towardsdatascience.com/preprocessing-time-series-data-for-supervised-learning-2e27493f44ae)
-- [Convert a Time Series to a Supervised Learning Problem in Python](https://machinelearningmastery.com/convert-time-series-supervised-learning-problem-python/)
-- [Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
-- [A Quick Deep Learning Recipe: Time Series Forecasting with Keras in Python](https://towardsdatascience.com/a-quick-deep-learning-recipe-time-series-forecasting-with-keras-in-python-f759923ba64)
-- [How to Make Out-of-Sample Forecasts with ARIMA in Python](https://machinelearningmastery.com/make-sample-forecasts-arima-python/)
-
-## Procedure
-1. Import dependencies - complete
-2. Import data set from provisional database - complete
-3. Preprocess Data - provisionally complete
-4. Split the dataset into training (ARIMA model) and testing. 
-5. Apply a standard scaler 
-6. Difference the data - to make it stationary.  
-7. Define / Develop Neural Network 
-8. Fit model
-9. Build features for forecasting
-
-## Status
-Becoming familiar with the new methods to apply ML forecasting to time series data.
 
 
