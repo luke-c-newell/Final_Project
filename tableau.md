@@ -9,7 +9,7 @@ Create World Covid Map  :
 Create New Covid Cases Plot  : 
  ![alt text][Image2]
   
- [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup2.PNG "Create New Covid Cases Plot" 
+ [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Covid_Cases_Plot.PNG "Create New Covid Cases Plot" 
  
  Create New Vaccinations Pie Chart:
  ![alt text][Image3]
