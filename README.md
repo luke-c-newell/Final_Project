@@ -52,7 +52,7 @@ As a team, we will communicate primarily through a private slack channel 'Group_
 - Matplotlib
 - ReadMe
 - PPT or Google Slides
-- Tableau
+- Tableau :https://public.tableau.com/views/USANEWCOVIDCASES/Team_1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
 
 
 ## Overview of the Machine Learning Analysis 
