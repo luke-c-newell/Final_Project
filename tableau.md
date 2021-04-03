@@ -4,7 +4,7 @@ This segment my responsibility is working on creating three images to use in the
 Create World Covid Map  : 
  ![alt text][Image1]
   
- [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-1/Database_Setup1.PNG "Create World Covid Map"
+ [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/Interactive_World_Wide_Covid_Map.PNG "Create World Covid Map"
  
 Create New Covid Cases Plot  : 
  ![alt text][Image2]
