@@ -16,7 +16,7 @@ Create New Covid Cases Plot  :
   
  [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Vaccination_Cases_Plot.PNG "Create New Vaccinations Pie Chart" 
 
-Finally we create the Interactive Dashboard at the link below where the visitor can click on the world map and select county, then the New Case Chart and Total Vaccination pie chart will be updated accourdingly :
+Finally we create the Interactive Dashboard at the link below where the visitor can click on the world map and select county, then the New Case Chart and Total Vaccination pie chart will be updated accourdingly:
 
 https://public.tableau.com/views/USANEWCOVIDCASES/Team_1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
 
