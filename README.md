@@ -1,5 +1,4 @@
 ## Overview
-----------------------------------------------------------------------------------
 This repository contains code for our final project, completed as part of the University of Texas at Austin - Data Analysis and Visualization bootcamp. The project will analyze data related to the Covid-19 pandemic, with the aim of producing a machine learning model that predicts the number of cases/fatalities that a given country can expect in the future.
 
 #### Team Members:
@@ -71,19 +70,43 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 - [Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
 - [A Quick Deep Learning Recipe: Time Series Forecasting with Keras in Python](https://towardsdatascience.com/a-quick-deep-learning-recipe-time-series-forecasting-with-keras-in-python-f759923ba64)
 - [How to Make Out-of-Sample Forecasts with ARIMA in Python](https://machinelearningmastery.com/make-sample-forecasts-arima-python/)
+- [Quick start Prophet](https://facebook.github.io/prophet/docs/quick_start.html)
+
 
 ## Procedure
-1. Import dependencies - complete
-2. Import data set from provisional database - complete
-3. Preprocess Data - provisionally complete
+1. Import dependencies
+2. Import data set from provisional database
+3. Preprocess Data
 4. Split the dataset into training (ARIMA model) and testing. 
 5. Apply a standard scaler 
-6. Difference the data - to make it stationary.  
+6. Difference the data to make it stationary
 7. Define / Develop Neural Network 
 8. Fit model
 9. Build features for forecasting
 
-## Status
-Becoming familiar with the new methods to apply ML forecasting to time series data.
+## Comparison of ML Models
+To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on three models to test: an ARIMA, a DNN and FBProphet.
 
+### Description of preliminary data preprocessing
+To preprocess the data for use in the machine learning models, we completed the following steps:
+- Selected desired columns from the database
+- Use fillna function to replace any NaN values with 0
+- Convert date column to dtype datetime
+
+### Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+For all three models, we decided to complete a time series forecast plotting datetime data against two features: new_cases and new_deaths in the United States. We decided to choose these metrics as they provide the best insight into the spread of the virus and the effect it has on the country. Time series forecast models rely heavily on historical data to predict future values. As such, we are currently using just one feature for each model to predict either new cases or new deaths.
+
+- ARIMA: Created a new dataframe with columns 'date' and 'new_cases'/'new_deaths'.
+- DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct RNN input shape: (batch_size, window size, input_features).
+- FBProphet: Used a dataframe with the historical data with two columns: ds and y (date and feature).
+
+### Description of how data was split into training and testing sets
+- ARIMA: This model required splitting the data into training and validation datasets, by creating two csv files that the model could read from. The data was split using a split point that removed the last 7 days of data from the training dataset and saved it in the validation file.
+- DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.
+- FBProphet: The training data used a dataframe with all the historical data. For testing, I created a new dataframe (future) to store the future dates and the predicted values were then populated by the model.
+
+### Explanation of model choice, including limitations and benefits
+- ARIMA: ARIMA stands for Auto-Regressive Integrated Moving Average and uses a moving window to predict future values. One limitation of this method is that the model produces a lagged correlation, which means the predicted values show movement after the lookback window has elapsed. This means the model is heavily dependent on recent data to show changes in its predictions. A benefit of this model is that the predicted values closely follow the recent trends and as such can show a higher level of accuracy compared to other models.
+- DNN: The Deep Neural Network model was chosen as it works well with a complete dataset and is able to be used with univariate and multivariate data. A limitation of the model is that it also is affected by lagged correlation, but this model does capture the overall trends with a high degree of accuracy. 
+- FBProphet: This model was chosen as it is a suitable model for time series forecasting, that uses past trends to predict future values. One limitation is that the model is highly affected by seasonality, which reduces the benefit as we only have ~420 days of data and so yearly trends are not able to be determined. But, the model does allow for weekly and monthly variations, which will come in particularly useful when analyzing COVID-19 metrics.
 
