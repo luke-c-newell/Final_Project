@@ -1,13 +1,13 @@
-# Data Base Update – 04/01/2021 Mike Hankinson
+# Data Base Update – 04/04/2021 Mike Hankinson
 ----------------------------------------------------------------------------------
 
 ## Database Integration Deliverables
-1.	Database stores static data for use during the project
-2.	Database interfaces with the project in some format
-3.	Includes at least two tables
-4.	Includes at least one join using the database language (not including any joins in Pandas)
-5.	Includes at least one connection string (using SQLAlchemy or PyMongo)
-6.	Provide ERD with relationships
+1.	Database stores static data for use during the project (COMPLETE)
+2.	Database interfaces with the project in some format (COMPLETE)
+3.	Includes at least two tables (COMPLETE)
+4.	Includes at least one join using the database language (COMPLETE)
+5.	Includes at least one connection string (COMPLETE - SQLAlchemy or PyMongo)
+6.	Provide ERD with relationships (COMPLETE)
 
 ## Database Integration Progress
 As of Thursday, April 1, our Final_Project database answers deliverables 1-4.  I will create the ERD tomorrow (deliverable 6).  
@@ -52,10 +52,6 @@ FOLDER: Data_Base_Hankinson
 
 •	**owid-covid-data.csv** - Input data containing covid data.  This file is read into **Database_Integration_04012021.sql** and populates **raw_covid_clean** table.  
 
-
-## Action Items
-1.	****Include at least one connection string (using SQLAlchemy or PyMongo).**  Owner: team to discuss
-2.	Provide ERD with relationships. Owner: Mike 
 
 
 
