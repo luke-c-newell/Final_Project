@@ -88,7 +88,7 @@ FOLDER: Data_Base_Hankinson
 
 •	**Database_ETL_04012021.ipynb** – This file contains python code that performs the following operations:  imports data sets, populates both input tables into the pgAdmin **Final_Project** database.  Open with Jupyter Notebook.  
 
-     **NOTE:  The joined table (model input) is named covid_data_final.  Model inputs must be modified for this change.**  
+     NOTE:  The joined table (model input) is named covid_data_final.  Model inputs must be modified for this change.
 
 •	**Database_Integration_04012021.sql** – This file contains the **Final_Project** database that houses 3 tables.  Open file with pgAdmin
 
@@ -136,14 +136,14 @@ To optimize our ML forecast, we decided to compare various models to understand 
 To preprocess the data for use in the machine learning models, we completed the following steps:
 - Selected desired columns from the database
 - Use fillna function to replace any NaN values with 0
-- Convert date column to dtype datetime
+- Convert date column to datetime datatype
 
 ### Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 For all three models, we decided to complete a time series forecast plotting datetime data against two features: new_cases and new_deaths in the United States. We decided to choose these metrics as they provide the best insight into the spread of the virus and the effect it has on the country. Time series forecast models rely heavily on historical data to predict future values. As such, we are currently using just one feature for each model to predict either new cases or new deaths.
 
 - ARIMA: Created a new dataframe with columns 'date' and 'new_cases'/'new_deaths'.
 - DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct RNN input shape: (batch_size, window size, input_features).
-- FBProphet: Used a dataframe with the historical data with two columns: ds and y (date and feature).
+- FBProphet: Used a dataframe containing the historical data with two columns: ds and y (date and feature).
 
 ### Description of how data was split into training and testing sets
 - ARIMA: This model required splitting the data into training and validation datasets, by creating two csv files that the model could read from. The data was split using a split point that removed the last 7 days of data from the training dataset and saved it in the validation file.
@@ -151,7 +151,7 @@ For all three models, we decided to complete a time series forecast plotting dat
 - FBProphet: The training data used a dataframe with all the historical data. For testing, I created a new dataframe (future) to store the future dates and the predicted values were then populated by the model.
 
 ### Explanation of model choice, including limitations and benefits
-- ARIMA: ARIMA stands for Auto-Regressive Integrated Moving Average and uses a moving window to predict future values. One limitation of this method is that the model produces a lagged correlation, which means the predicted values show movement after the lookback window has elapsed. This means the model is heavily dependent on recent data to show changes in its predictions. A benefit of this model is that the predicted values closely follow the recent trends and as such can show a higher level of accuracy compared to other models.
+- ARIMA: The Auto-Regressive Integrated Moving Average model uses a moving window to predict future values. One limitation of this method is that the model produces a lagged correlation, which means the predicted values show movement after the lookback window has elapsed. This means the model is heavily dependent on recent data to show changes in its predictions. A benefit of this model is that the predicted values closely follow the recent trends and as such can show a higher level of accuracy compared to other models.
 - DNN: The Deep Neural Network model was chosen as it works well with a complete dataset and is able to be used with univariate and multivariate data. A limitation of the model is that it also is affected by lagged correlation, but this model does capture the overall trends with a high degree of accuracy. 
 - FBProphet: This model was chosen as it is a suitable model for time series forecasting, that uses past trends to predict future values. One limitation is that the model is highly affected by seasonality, which reduces the benefit as we only have ~420 days of data and so yearly trends are not able to be determined. But, the model does allow for weekly and monthly variations, which will come in particularly useful when analyzing COVID-19 metrics.
 
