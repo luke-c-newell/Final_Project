@@ -130,7 +130,10 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 9. Build features for forecasting
 
 ## Comparison of ML Models
-To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on three models to test: an ARIMA, a DNN and FBProphet.
+To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on three models to test: 
+- [ARIMA](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/ARIMA_Model.ipynb)
+- [DNN](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/DNN_Model.ipynb)
+- [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
 
 ### Description of preliminary data preprocessing
 To preprocess the data for use in the machine learning models, we completed the following steps:
