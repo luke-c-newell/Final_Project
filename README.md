@@ -135,6 +135,8 @@ To optimize our ML forecast, we decided to compare various models to understand 
 - [DNN](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/DNN_Model.ipynb)
 - [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
 
+You can review the code for each model via the links above!
+
 ### Description of preliminary data preprocessing
 To preprocess the data for use in the machine learning models, we completed the following steps:
 - Selected desired columns from the database
@@ -180,3 +182,6 @@ For all three models, we decided to complete a time series forecast plotting dat
 
 You can find the [Interactive Dashboard here](https://public.tableau.com/views/USANEWCOVIDCASES/Team_1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), where the user can click on the world map and select their country of choice, then the New Case Chart and Total Vaccination pie chart will be updated to show country specific information.
 
+### Group Presentation
+- Website and dashboard items [Group9webpage.com](https://www.group9webpage.com/)
+- Development of Storyboard in Google Slides [Group 9 Storyboard](https://docs.google.com/presentation/d/1iybh9tz-hBt0wZW32HK4HYpuZEM1wvvOt4wDN5cdlCE/edit?usp=sharing)
