@@ -131,8 +131,8 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 
 ## Comparison of ML Models
 To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on three models to test: 
-- [ARIMA](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/ARIMA_Model.ipynb)
-- [DNN](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/DNN_Model.ipynb)
+- [Deep Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
+- [Recurrent Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
 
 You can review the code for each model via the links above!
