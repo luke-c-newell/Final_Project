@@ -148,8 +148,8 @@ For all three models, we decided to complete a time series forecast plotting dat
 - DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 2-D DNN input shape.
 - RNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 3-D RNN input shape: (batch_size, window size, input_features).
 - FBProphet: Used a dataframe containing the historical data with two columns: ds and y (date and feature).
-
-### Description of how data was split into training and testing sets
+ 
+### Description of training and testing data split as well as training methodologies
 
 - DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  The model was built with one hidden layer using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
 - RNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  Unlike DNN, the RNN model was built with two hidden layers again using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
@@ -160,6 +160,10 @@ For all three models, we decided to complete a time series forecast plotting dat
 - DNN: The Deep Neural Network model was chosen as it works well with a complete dataset and is able to be used with univariate and multivariate data. A limitation of the model is that it also is affected by lagged correlation, but this model does capture the overall trends with a high degree of accuracy. 
 - RNN: The Recurrent Neural Network is a type of artificial neural model that is specifically desgined to work with time series or sequential data.  These models are somewhat unique in that they maintain a 'memory'as they take information from prior inputs to influence the current input/output -- inputs/outputs of this model type are not independent of one another.    
 - FBProphet: This model was chosen as it is a suitable model for time series forecasting, that uses past trends to predict future values. One limitation is that the model is highly affected by seasonality, which reduces the benefit as we only have ~420 days of data and so yearly trends are not able to be determined. But, the model does allow for weekly and monthly variations, which will come in particularly useful when analyzing COVID-19 metrics.
+
+### Model Accuracy Scores
+
+![Accuarcy Scores][https://github.com/luke-c-newell/Final_Project/blob/main/Images/Model_Errors_Readme_Graphic.PNG]
 
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
