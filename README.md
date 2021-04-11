@@ -163,10 +163,9 @@ For all three models, we decided to complete a time series forecast plotting dat
 
 ### Model Accuracy Scores
 <br>
-<br>
+
 ![Accuracy Scores](Images/Model_Errors_Readme_Graphic.PNG)
-<br>
-<br>
+
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
 
