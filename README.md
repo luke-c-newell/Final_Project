@@ -131,7 +131,6 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 
 ## Comparison of ML Models
 To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on these models to test: 
-- [ARIMA](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/ARIMA_Model.ipynb)
 - [Deep Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [Recurrent Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
@@ -147,18 +146,20 @@ To preprocess the data for use in the machine learning models, we completed the 
 ### Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 For all three models, we decided to complete a time series forecast plotting datetime data against two features: new_cases and new_deaths in the United States. We decided to choose these metrics as they provide the best insight into the spread of the virus and the effect it has on the country. Time series forecast models rely heavily on historical data to predict future values. As such, we are currently using just one feature for each model to predict either new cases or new deaths.
 
-- ARIMA: Created a new dataframe with columns 'date' and 'new_cases'/'new_deaths'.
-- DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct RNN input shape: (batch_size, window size, input_features).
+- DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 2-D DNN input shape.
+- RNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 3-D RNN input shape: (batch_size, window size, input_features).
 - FBProphet: Used a dataframe containing the historical data with two columns: ds and y (date and feature).
 
 ### Description of how data was split into training and testing sets
-- ARIMA: This model required splitting the data into training and validation datasets, by creating two csv files that the model could read from. The data was split using a split point that removed the last 7 days of data from the training dataset and saved it in the validation file.
-- DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.
-- FBProphet: The training data used a dataframe with all the historical data. For testing, I created a new dataframe (future) to store the future dates and the predicted values were then populated by the model.
+
+- DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  The model was built with one hidden layer using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
+- RNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  Unlike DNN, the RNN model was built with two hidden layers again using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
+- FBProphet: The training data used a dataframe with all the historical data. For testing, a new dataframe (future) was created to store the future dates and the predicted values were then populated by the model.
 
 ### Explanation of model choice, including limitations and benefits
-- ARIMA: The Auto-Regressive Integrated Moving Average model uses a moving window to predict future values. One limitation of this method is that the model produces a lagged correlation, which means the predicted values show movement after the lookback window has elapsed. This means the model is heavily dependent on recent data to show changes in its predictions. A benefit of this model is that the predicted values closely follow the recent trends and as such can show a higher level of accuracy compared to other models.
+
 - DNN: The Deep Neural Network model was chosen as it works well with a complete dataset and is able to be used with univariate and multivariate data. A limitation of the model is that it also is affected by lagged correlation, but this model does capture the overall trends with a high degree of accuracy. 
+- RNN: The Recurrent Neural Network is a type of artificial neural model that is specifically desgined to work with time series or sequential data.  These models are somewhat unique in that they maintain a 'memory'as they take information from prior inputs to influence the current input/output -- inputs/outputs of this model type are not independent of one another.    
 - FBProphet: This model was chosen as it is a suitable model for time series forecasting, that uses past trends to predict future values. One limitation is that the model is highly affected by seasonality, which reduces the benefit as we only have ~420 days of data and so yearly trends are not able to be determined. But, the model does allow for weekly and monthly variations, which will come in particularly useful when analyzing COVID-19 metrics.
 
 ## Creating Dashboard Using Tableau
