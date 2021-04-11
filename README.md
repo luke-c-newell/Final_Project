@@ -64,7 +64,7 @@ As a team, we will communicate primarily through a private slack channel 'Group_
 ### File Structure 
 The files are maintained in the following structure.  
 
-FOLDER: Data_Base_Hankinson
+FOLDER: Data_Base
 
 	Database_Create_and_Join_Tables_04012021.sql
 	
