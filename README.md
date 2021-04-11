@@ -25,7 +25,6 @@ The live dataset can be found at [OurWorldinData.org](https://covid.ourworldinda
 ### Questions we hope to answer with the data
 - Based on available data, how many cases can a country expect to see over the next two weeks? 
 - Based on available data, how many fatalities can a country expect to see over the next two weeks?
-- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
 
 ### Communication protocols
 As a team, we will communicate primarily through a private slack channel 'Group_9'. We have also shared our cell phone numbers with each other in case we need to urgently reach another team member. If a team member is unable to join the Tuesday or Thursday meetings, they should notify the other team members via the slack channel. We also have a recurring Zoom meeting set up that team members can join as needed.
