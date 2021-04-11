@@ -64,7 +64,7 @@ As a team, we will communicate primarily through a private slack channel 'Group_
 ### File Structure 
 The files are maintained in the following structure.  
 
-FOLDER: Data_Base
+FOLDER:  [Data_Base](https://github.com/luke-c-newell/Final_Project/tree/main/Database)
 
 	Database_Create_and_Join_Tables_04012021.sql
 	
@@ -76,7 +76,7 @@ FOLDER: Data_Base
 
 	Provisional_ML_Model_Week2.ipynb
 
-	FOLDER: Resources
+	FOLDER: [Resources](https://github.com/luke-c-newell/Final_Project/tree/main/Database)
 	
 		country_index.csv
 		
