@@ -76,7 +76,7 @@ FOLDER:  [Data_Base](https://github.com/luke-c-newell/Final_Project/tree/main/Da
 
 	Provisional_ML_Model_Week2.ipynb
 
-	FOLDER: [Resources](https://github.com/luke-c-newell/Final_Project/tree/main/Database)
+	FOLDER: [Resources](https://github.com/luke-c-newell/Final_Project/tree/main/Database/Resources)
 	
 		country_index.csv
 		
