@@ -185,7 +185,7 @@ To visualize the data, we are using Tableau with the COVID data imported from ou
 
 ![Deaths Page](Images/Tableau_Images/Tableau_New_Deaths.PNG)
 
-You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as then intereact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
+You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as intereact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
 
 ### Group Presentation
 - Website [Group9webpage.com](https://www.group9webpage.com/)
