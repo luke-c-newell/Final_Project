@@ -25,12 +25,16 @@ The live dataset can be found at [OurWorldinData.org](https://covid.ourworldinda
 ### Questions we hope to answer with the data
 - Based on available data, how many cases can a country expect to see over the next two weeks? 
 - Based on available data, how many fatalities can a country expect to see over the next two weeks?
-- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
 
-### Communication protocols
-As a team, we will communicate primarily through a private slack channel 'Group_9'. We have also shared our cell phone numbers with each other in case we need to urgently reach another team member. If a team member is unable to join the Tuesday or Thursday meetings, they should notify the other team members via the slack channel. We also have a recurring Zoom meeting set up that team members can join as needed.
+### Description of the data exploration phase of the project
+We performed a introductory analysis on COVID-19 cases and deaths in the USA, after an initial visualization of the worldwide data showed that the USA has been badly affected when compared to other countries. The team visualized the data using Matplotlib to compare the daily numbers with a weekly average. The weekly averaging smoothed out the data, enabling the team to create a smoother curve plot and removing the daily fluctuations that were created.  
+
+### Description of the analysis phase of the project
+The analysis phase of the project consisted of a comparison of different machine learning models, testing how each model was able to accurately predict COVID-19 cases and deaths in the USA. The models we tested were: ARIMA, DNN, RNN and FBProphet. Each model had slightly different requirements for analyzing the data and provided the team with different insights into the optimal forecasting method for COVID-19. Further information can be found in the 'Overview of the Machine Learning Analysis' section below.
 
 ## Technologies Used
+All packages used to run the code in this project can be found in the [requirements.txt file](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-3/requirements.txt).
+
 ### Tools:
 - Python
 - Pandas
@@ -43,9 +47,10 @@ As a team, we will communicate primarily through a private slack channel 'Group_
 - pgAdmin
 
 ### Machine Learning:  
-- Scikit Learn
+- Scikit-learn
 - TensorFlow
 - Keras
+- FBProphet
 
 ### Vis & Analysis:  
 - Matplotlib, Plotly
@@ -53,58 +58,10 @@ As a team, we will communicate primarily through a private slack channel 'Group_
 - Google Slides
 - Tableau
 
-## Database Integration Deliverables
-1.	Database stores static data for use during the project (COMPLETE)
-2.	Database interfaces with the project in some format (COMPLETE)
-3.	Includes at least two tables (COMPLETE)
-4.	Includes at least one join using the database language (COMPLETE)
-5.	Includes at least one connection string (COMPLETE - SQLAlchemy)
-6.	Provide ERD with relationships (COMPLETE)
-
-### File Structure 
-The files are maintained in the following structure.  
-
-FOLDER: Data_Base_Hankinson
-
-	Database_Create_and_Join_Tables_04012021.sql
-	
-	Database_ETL_04012021.ipynb
-	
-	Database_Integration_04012021.sql
-
-	Deep_Learning_Recipe.ipynb
-
-	Provisional_ML_Model_Week2.ipynb
-
-	FOLDER: Resources
-	
-		country_index.csv
-		
-		owid-covid-data.csv
-
-### File Details
-
-•	**Database_Create_and_Join_Tables_04012021.sql** - This file contains code, that when run within the in pgAdmin Query Editor for the **Final_Project** database accomplishes the following: creates tables **raw_covid_clean** and **country** as well as performs the join on the 2 tables into a third.   Open file with Visual Studio Code.  
-
-•	**Database_ETL_04012021.ipynb** – This file contains python code that performs the following operations:  imports data sets, populates both input tables into the pgAdmin **Final_Project** database.  Open with Jupyter Notebook.  
-
-     NOTE:  The joined table (model input) is named covid_data_final.  Model inputs must be modified for this change.
-
-•	**Database_Integration_04012021.sql** – This file contains the **Final_Project** database that houses 3 tables.  Open file with pgAdmin
-
-•	**Deep_Learning_Recipe.ipynb** - Using python code, develops a model for the data set.  Demonstrates the ability to interact with the **Final_Project** database.
-
-•	**Provisional_ML_Model_Week2.ipynb** – Using python code, develops a model for the data set.  Demonstrates the ability to interact with the **Final_Project** database.
-
-•	**country_index.csv** – Input data containing an index listing of all countries.  This file is read into **Database_Integration_04012021.sql** and populates **country** table.  
-
-•	**owid-covid-data.csv** - Input data containing covid data.  This file is read into **Database_Integration_04012021.sql** and populates **raw_covid_clean** table.  
-
 ## Overview of the Machine Learning Analysis 
 This model will attempt to answer the following questions regarding the CoVID pandemic:
 - Based on available data, how many cases can a country expect to see over the next given time period?
 - Based on available data, how many fatalities can a country expect to see over the next given time period?
-- Bonus: How have the creation of vaccines affected the number of cases/fatalities in the United States?
 
 In order to accomplish this task, we must employ a novel model type that was not presented within the Data Analytics Bootcamp.  Rather than employing classification or clustering models, this analysis must incorporate a supervised regression ML model. 
 
@@ -131,59 +88,74 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 
 ## Comparison of ML Models
 To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on these models to test: 
-- [ARIMA](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/ARIMA_Model.ipynb)
 - [Deep Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [Recurrent Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
 
 You can review the code for each model via the links above!
 
-### Description of preliminary data preprocessing
+### Description of data preprocessing
 To preprocess the data for use in the machine learning models, we completed the following steps:
 - Selected desired columns from the database
 - Use fillna function to replace any NaN values with 0
 - Convert date column to datetime datatype
 
-### Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+### Description of feature engineering and feature selection, including the decision-making process
 For all three models, we decided to complete a time series forecast plotting datetime data against two features: new_cases and new_deaths in the United States. We decided to choose these metrics as they provide the best insight into the spread of the virus and the effect it has on the country. Time series forecast models rely heavily on historical data to predict future values. As such, we are currently using just one feature for each model to predict either new cases or new deaths.
 
-- ARIMA: Created a new dataframe with columns 'date' and 'new_cases'/'new_deaths'.
-- DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct RNN input shape: (batch_size, window size, input_features).
+- DNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 2-D DNN input shape.
+- RNN: Incorporated a helper function, convert2matrix, to reshape the dataset into the correct 3-D RNN input shape: (batch_size, window size, input_features).
 - FBProphet: Used a dataframe containing the historical data with two columns: ds and y (date and feature).
+ 
+### Description of training and testing data split as well as training methodologies
 
-### Description of how data was split into training and testing sets
-- ARIMA: This model required splitting the data into training and validation datasets, by creating two csv files that the model could read from. The data was split using a split point that removed the last 7 days of data from the training dataset and saved it in the validation file.
-- DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.
-- FBProphet: The training data used a dataframe with all the historical data. For testing, I created a new dataframe (future) to store the future dates and the predicted values were then populated by the model.
+- DNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  The model was built with one hidden layer using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
+- RNN: For training, we used 75% of the available data minus a 'look back' window of 15 days. The testing data used the remainder of the dataset.  Unlike DNN, the RNN model was built with two hidden layers again using the rectified linear (ReLU) activation function.  The model compiled both the training and testing loss over a maximum of 100 epochs.  
+- FBProphet: The training data used a dataframe with all the historical data. For testing, a new dataframe (future) was created to store the future dates and the predicted values were then populated by the model.
 
 ### Explanation of model choice, including limitations and benefits
-- ARIMA: The Auto-Regressive Integrated Moving Average model uses a moving window to predict future values. One limitation of this method is that the model produces a lagged correlation, which means the predicted values show movement after the lookback window has elapsed. This means the model is heavily dependent on recent data to show changes in its predictions. A benefit of this model is that the predicted values closely follow the recent trends and as such can show a higher level of accuracy compared to other models.
+
 - DNN: The Deep Neural Network model was chosen as it works well with a complete dataset and is able to be used with univariate and multivariate data. A limitation of the model is that it also is affected by lagged correlation, but this model does capture the overall trends with a high degree of accuracy. 
+- RNN: The Recurrent Neural Network is a type of artificial neural model that is specifically desgined to work with time series or sequential data.  These models are somewhat unique in that they maintain a 'memory'as they take information from prior inputs to influence the current input/output -- inputs/outputs of this model type are not independent of one another.    
 - FBProphet: This model was chosen as it is a suitable model for time series forecasting, that uses past trends to predict future values. One limitation is that the model is highly affected by seasonality, which reduces the benefit as we only have ~420 days of data and so yearly trends are not able to be determined. But, the model does allow for weekly and monthly variations, which will come in particularly useful when analyzing COVID-19 metrics.
+
+### Description of how we have trained the model thus far, and additional training we plan to conduct
+- DNN: This model was trained over 100 epochs using the adam optimizer
+- RNN: This model was trained over 100 epochs using the adam optimizer
+- FBProphet: This model was trained using the FBProphet fit function with over 420 days of historical data
+
+We plan to train the FBProphet Models further, as the accuracy score for the deaths model is currently much lower than desired.
+
+### Model Accuracy Scores
+<br>
+
+![Accuracy Scores](Images/Model_Errors_Readme_Graphic.PNG)
+
+#### R-square scores for FBProphet Models
+FBProphet_Model_Cases - 0.91
+FBProphet_Model_Deaths - 0.48
 
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
 
-### World Covid Map
+### Tableau Landing Page
+<br>
 
- ![alt text][Image1]
+ ![Landing Page](Images/Tableau_Images/Tableau_Landing_Page.PNG)
   
- [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/Interactive_World_Wide_Covid_Map.PNG "Create World Covid Map"
  
 ### New Covid Cases Plot
+<br>
 
- ![alt text][Image2]
-  
- [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Covid_Cases_Plot.PNG "Create New Covid Cases Plot" 
+ ![Cases Page](Images/Tableau_Images/Tableau_New_Cases.PNG)
  
-### New Vaccinations Pie Chart
+### New Covid Deaths Plot
+<br>
 
- ![alt text][Image3]
-  
- [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Vaccination_Cases_Plot.PNG "Create New Vaccinations Pie Chart" 
+![Deaths Page](Images/Tableau_Images/Tableau_New_Deaths.PNG)
 
-You can find the [Interactive Dashboard here](https://public.tableau.com/views/USANEWCOVIDCASES/Team_1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), where the user can click on the world map and select their country of choice, then the New Case Chart and Total Vaccination pie chart will be updated to show country specific information.
+You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as intereact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
 
 ### Group Presentation
-- Website and dashboard items [Group9webpage.com](https://www.group9webpage.com/)
+- Website [Group9webpage.com](https://www.group9webpage.com/)
 - Development of Storyboard in Google Slides [Group 9 Storyboard](https://docs.google.com/presentation/d/1iybh9tz-hBt0wZW32HK4HYpuZEM1wvvOt4wDN5cdlCE/edit?usp=sharing)
