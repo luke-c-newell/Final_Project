@@ -169,26 +169,24 @@ For all three models, we decided to complete a time series forecast plotting dat
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
 
-### World Covid Map
+### Tableau Landing Page
+<br>
 
- ![alt text][Image1]
+ ![Landing Page](Images/Tableau_Images/Tableau_Landing_Page.PNG)
   
- [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/Interactive_World_Wide_Covid_Map.PNG "Create World Covid Map"
  
 ### New Covid Cases Plot
+<br>
 
- ![alt text][Image2]
-  
- [Image2]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Covid_Cases_Plot.PNG "Create New Covid Cases Plot" 
+ ![Cases Page](Images/Tableau_Images/Tableau_New_Cases.PNG)
  
-### New Vaccinations Pie Chart
+### New Covid Deaths Plot
+<br>
 
- ![alt text][Image3]
-  
- [Image3]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/World_New_Vaccination_Cases_Plot.PNG "Create New Vaccinations Pie Chart" 
+![Deaths Page](Images/Tableau_Images/Tableau_New_Deaths.PNG)
 
-You can find the [Interactive Dashboard here](https://public.tableau.com/views/USANEWCOVIDCASES/Team_1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link), where the user can click on the world map and select their country of choice, then the New Case Chart and Total Vaccination pie chart will be updated to show country specific information.
+You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as then intereact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
 
 ### Group Presentation
-- Website and dashboard items [Group9webpage.com](https://www.group9webpage.com/)
+- Website [Group9webpage.com](https://www.group9webpage.com/)
 - Development of Storyboard in Google Slides [Group 9 Storyboard](https://docs.google.com/presentation/d/1iybh9tz-hBt0wZW32HK4HYpuZEM1wvvOt4wDN5cdlCE/edit?usp=sharing)
