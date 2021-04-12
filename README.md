@@ -131,10 +131,6 @@ We plan to train the FBProphet Models further, as the accuracy score for the dea
 
 ![Accuracy Scores](Images/Model_Errors_Readme_Graphic.PNG)
 
-#### R-square scores for FBProphet Models
-- FBProphet_Model_Cases - 0.91
-- FBProphet_Model_Deaths - 0.48
-
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
 
