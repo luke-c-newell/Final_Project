@@ -90,7 +90,7 @@ Machine Learning models are not typically applied to time series data.  Rather, 
 To optimize our ML forecast, we decided to compare various models to understand which would provide the most accurate prediction of future COVID cases and deaths in the USA. After completing some research on models for time series forecasting, we arrived on these models to test: 
 - [Deep Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
 - [Recurrent Neural Network Model](https://github.com/luke-c-newell/Final_Project/blob/main/ML_Models/DNN_and_RNN_ML_Models/DNN_and_RNN_ML_Models.ipynb)
-- [FBProphet](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-2/FBProphet_Model.ipynb)
+- [FBProphet](ML_Models/FBProphet)
 
 You can review the code for each model via the links above!
 
@@ -132,8 +132,8 @@ We plan to train the FBProphet Models further, as the accuracy score for the dea
 ![Accuracy Scores](Images/Model_Errors_Readme_Graphic.PNG)
 
 #### R-square scores for FBProphet Models
-FBProphet_Model_Cases - 0.91
-FBProphet_Model_Deaths - 0.48
+- FBProphet_Model_Cases - 0.91
+- FBProphet_Model_Deaths - 0.48
 
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
