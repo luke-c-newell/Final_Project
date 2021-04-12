@@ -4,6 +4,8 @@ This Segment-3 my responsible is continuing working an improving Dashboard, also
 Create World Covid Interactive Map  : 
  ![alt text][Image1]
   
+ [Image1]: https://github.com/luke-c-newell/Final_Project/blob/ttan0408/segment-2/Interactive_World_Wide_Covid_Map.PNG "Create World Covid Map"
+  
  
 https://public.tableau.com/views/USANEWCOVIDCASES-TEAM9/Seg4?:language=en&:display_count=y&publish=yes&:origin=viz_share_link
 
