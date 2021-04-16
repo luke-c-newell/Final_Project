@@ -33,7 +33,7 @@ We performed a introductory analysis on COVID-19 cases and deaths in the USA, af
 The analysis phase of the project consisted of a comparison of different machine learning models, testing how each model was able to accurately predict COVID-19 cases and deaths in the USA. The models we tested were: ARIMA, DNN, RNN and FBProphet. Each model had slightly different requirements for analyzing the data and provided the team with different insights into the optimal forecasting method for COVID-19. Further information can be found in the 'Overview of the Machine Learning Analysis' section below.
 
 ## Technologies Used
-All packages used to run the code in this project can be found in the [requirements.txt file](https://github.com/luke-c-newell/Final_Project/blob/luke-c-newell/segment-3/requirements.txt).
+The following lists the technologies used for this project:
 
 ### Tools:
 - Python
