@@ -16,3 +16,5 @@
  * Compared the FBProphet and the DNN/RNN models graphically
  * Apply a multivariate model with numerous features using the RNN model because of the ability to maintain "memory" throug a feedback loop.
 
+## Added links for this week:
+* [Vaccination Visualization] (https://public.tableau.com/shared/2CGB457CX?:display_count=n&:origin=viz_share_link)
