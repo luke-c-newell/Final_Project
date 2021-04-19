@@ -7,5 +7,7 @@
 * Prepped two hours on presentation as a group, dry run, honed slides, dry run, honed slides - Final dry run.
 * Prepped privately on presentation.
 * Git Hub commits / pull / create Seg 4
+* Add outline back to Google Slides.
 
 ## What we would have done differently as a group:
+* 
