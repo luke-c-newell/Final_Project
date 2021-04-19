@@ -160,7 +160,7 @@ To visualize the data, we are using Tableau with the COVID data imported from ou
 
 ### Vaccinations Chart
 
-You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as interact with model outputs.  You can also check out our [Vaccination Visualization] (https://public.tableau.com/shared/2CGB457CX?:display_count=n&:origin=viz_share_link) which shows the current progress of vaccinations in the USA.
+You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as interact with model outputs.  You can also check out our [Vaccination Visualization](https://public.tableau.com/shared/2CGB457CX?:display_count=n&:origin=viz_share_link) which shows the current progress of vaccinations in the USA.
 
 ### Group Presentation
 - Website [Group9webpage.com](https://www.group9webpage.com/)
