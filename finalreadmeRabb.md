@@ -4,7 +4,7 @@
 * Built vaccination visualizations in Tableau.
 * Tested links from Google Slides to visualizations.
 * Tested links from visualizations to website.
-* Updated website with not visuaizations.
+* Updated website with new visuaizations.
 * Prepped two hours on presentation as a group, dry run, honed slides, dry run, honed slides - Final dry run.
 * Prepped privately on presentation.
 * Git Hub commits / pull / create Seg 4
