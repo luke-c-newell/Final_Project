@@ -1,4 +1,4 @@
-# Segment 4 Updates for Group 9 Rabb
+# Segment 4 Updates for Group 9 (Keith Rabb)
 ## This week
 * Worked on visualizations in preparation for class presentation.
 * Built vaccination visualizations in Tableau.
