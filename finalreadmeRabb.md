@@ -1,6 +1,7 @@
 # Segment 4 Updates for Group 9 Rabb
 ## This week
 * Worked on visualizations in preparation for class presentation.
+* Built vaccination visualizations in Tableau.
 * Tested links from Google Slides to visualizations.
 * Tested links from visualizations to website.
 * Updated website with not visuaizations.
