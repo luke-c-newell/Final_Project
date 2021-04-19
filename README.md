@@ -126,10 +126,13 @@ For all three models, we decided to complete a time series forecast plotting dat
 
 We plan to train the FBProphet Models further, as the accuracy score for the deaths model is currently much lower than desired.
 
-### Model Accuracy Scores
+### Model Final Accuracy Scores
 <br>
 
 ![Accuracy Scores](Images/Model_Errors_Readme_Graphic.PNG)
+
+Above can be found the final accuracy scores for the machine learning models used in the project. This chart provides a direct comparison between the models, using a 7 day rolling average of covid-19 cases and deaths. As we looked two weeks into the future, the models performed reasonably well in the short term, but may require additional training to be able to perform to the same accuracy over a longer period of time. The DNN and RNN models performed best, but may be overfit and reliant on recent data to develop their predictions. The FBProphet cases model performed well, but when used with the deaths data did not provide an accuracte result. If we were to apply the same univariate approach to other countries, we'd use the most simple of the 3 models (DNN) as it requires less time and computing power to train the model, while still providing a consistently accurate result.
+
 
 ## Creating Dashboard Using Tableau
 To visualize the data, we are using Tableau with the COVID data imported from our database in pgAdmin. We have created a number of plots that show the spread of the virus around the world, including interactive elements that are described below. From these visualizations, the user can understand which countries have been most affected by the coronavirus, where the most new cases are arising, and which countries have vaccinated the largest number of their residents.
@@ -150,7 +153,7 @@ To visualize the data, we are using Tableau with the COVID data imported from ou
 
 ![Deaths Page](Images/Tableau_Images/Tableau_New_Deaths.PNG)
 
-You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as intereact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
+You can find the [Interactive Dashboard here](https://public.tableau.com/profile/andy3376#!/vizhome/USANEWCOVIDCASES-TEAM9/Seg4?publish=yes) and  [here](https://public.tableau.com/profile/keith.rabb#!/vizhome/MLM_Group9/MachineLearningModel) where the user can click on the world map and select their country of choice as well as interact with model outputs.  (Note: the Interactive Dashboards are yet to be merged into a single story board.)
 
 ### Group Presentation
 - Website [Group9webpage.com](https://www.group9webpage.com/)
